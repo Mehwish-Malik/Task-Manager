@@ -31,9 +31,10 @@ export default function HomePage() {
 
   if (!session) return null;
 
-  const handleAddTask = (title: string) => {
-    setTasks([{ title, id: crypto.randomUUID(), completed: false }, ...tasks]);
-  };
+ const handleAddTask = (title: string) => {
+  const id = Math.random().toString(36).substring(2, 10);
+  setTasks([{ title, id, completed: false }, ...tasks]);
+};
 
   const handleDeleteTask = (id: string) => {
     setTasks(tasks.filter((task) => task.id !== id));
@@ -78,7 +79,7 @@ export default function HomePage() {
         </button>
 
         <h1 className="text-4xl font-bold mb-6 text-yellow-400 text-center">
-  Welcome  👋 let’s manage your tasks! 📝
+  Welcome 👋<br /> let’s manage your tasks! 📝
 </h1>
 
 
