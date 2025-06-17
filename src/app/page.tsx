@@ -23,7 +23,7 @@ export default function HomePage() {
     if (status === 'unauthenticated') {
       router.push('/login');
     }
-  }, [status]);
+  }, [status , router]);
 
   if (status === 'loading') {
     return <p className="text-white text-center mt-10">Loading...</p>;

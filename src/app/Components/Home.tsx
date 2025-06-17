@@ -10,7 +10,7 @@ export default function Home() {
     if (isLoggedIn !== 'true') {
       router.push('/login');
     }
-  }, []);
+  }, [router]); // 👈 fix warning by adding router
 
   return (
     <div>
