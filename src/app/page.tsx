@@ -79,7 +79,7 @@ export default function HomePage() {
         </button>
 
         <h1 className="text-4xl font-bold mb-6 text-yellow-400 text-center">
-  Welcome 👋<br /> let’s manage your tasks! 📝
+  Welcome 👋<br /> let &apos;s manage your tasks! 📝
 </h1>
 
 
